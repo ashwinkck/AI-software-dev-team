@@ -5,4 +5,12 @@ def planner(state: AgentState):
 
     print("Planner Agent Executed")
 
-    return state
+    task = state["task"].lower()
+
+    if "research" in task:
+        return {
+            "decision":"research"
+        }
+    return {
+        "decision":"code"
+    }
