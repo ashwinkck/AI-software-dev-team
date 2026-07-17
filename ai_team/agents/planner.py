@@ -1,30 +1,35 @@
 from ai_team.state import AgentState
 from ai_team.llm import llm
 
+
 def planner(state: AgentState):
 
     task = state["task"]
 
     prompt = f"""
-You are a project planner.planner
+You are an AI project planner.
 
-Decide whether the following task requires:
+Your job is to classify the user's task into exactly one of these categories:
 
-research
-or
-code 
+- research
+- code
 
-Reply with only one word. 
+Rules:
+- Reply with ONLY one word.
+- Do not explain your answer.
+- Do not include punctuation.
 
 Task:
 {task}
 """
-    
+
     response = llm.invoke(prompt)
 
     decision = response.content.strip().lower()
 
-    return {
-        "decision":decision
-    }
+    if decision not in {"research", "code"}:
+        decision = "research"
 
+    return {
+        "decision": decision
+    }
