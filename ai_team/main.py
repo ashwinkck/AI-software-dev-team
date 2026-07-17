@@ -8,3 +8,4 @@ initial_state = {
     "review": "",
     "documentation": "",
 }
+result = graph.invoke(initial_state)
