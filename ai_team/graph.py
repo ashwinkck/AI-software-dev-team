@@ -1,7 +1,8 @@
 from langgraph.graph import StateGraph, START, END
-
 from ai_team.state import AgentState
 from ai_team.agents.planner import planner
+from ai_team.agents.researcher import researcher
+from ai_team.agents.coder import coder
 
 
 graph_builder = StateGraph(AgentState)
