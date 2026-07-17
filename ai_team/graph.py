@@ -4,13 +4,13 @@ from ai_team.agents.planner import planner
 from ai_team.agents.researcher import researcher
 from ai_team.agents.coder import coder
 
+def route(state: AgentState):
+    return state["decision"]
+
 
 graph_builder = StateGraph(AgentState)
-
 graph_builder.add_node("planner", planner)
-
 graph_builder.add_edge(START, "planner")
-
 graph_builder.add_edge("planner", END)
 
 graph = graph_builder.compile()
