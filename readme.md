@@ -5,7 +5,7 @@
                        │
               (Conditional Router)
           ┌────────────┴────────────┐
-          ▼                         ▼       Research Agent             Coding Agent
+          ▼                         ▼       ResearchAgent             Coding Agent
           │                         │
           └────────────┬────────────┘
                        ▼
