@@ -9,3 +9,4 @@ initial_state = {
     "documentation": "",
 }
 result = graph.invoke(initial_state)
+print(result)
