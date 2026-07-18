@@ -8,3 +8,4 @@ class AgentState(TypedDict):
     code: str
     review: str
     documentation: str
+    review_status: str
