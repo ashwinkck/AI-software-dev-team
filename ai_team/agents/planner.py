@@ -7,7 +7,9 @@ structured_llm = llm.with_structured_output(
     PlannerDecision
 )
 
+
 def planner(state: AgentState):
+
     prompt = PLANNER_PROMPT.format(
         task=state["task"]
     )
